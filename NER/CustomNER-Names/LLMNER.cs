@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 class Program
 {
     private const string API_KEY = "YOUR_API_KEY"; // Set your key here
-    private const string QUESTION = "Please responde ina json with the first, last name and middle name initial for me. Please use the following full name: Medina Gomez, Jose A"; // Set your question here
+    private const string FULL_NAME = "Medina Gomez, Jose A Microsoft Corportation"; // Set your question here
 
     private const string ENDPOINT  = "https://<OpenAIEndpoint>/openai/deployments/gpt4o/chat/completions?api-version=2024-02-15-preview";
     static async Task Main()
@@ -25,7 +25,7 @@ class Program
                       content = new object[] {
                           new {
                               type = "text",
-                              text = "Can you extract the first and last name from the following text? ##Important Please provide the output in a json with the keys 'first_name' and 'last_name' and middle_name_initial"
+                              text = "Can you extract the first and last name from the following text? \n ##Important \n\b** Please provide the output in a json with the keys 'first_name' and, 'suffix', 'middle_initial', 'last_name', 'entity_type': 'LOC','PER','ORG','TIME' if you identify that the entity type is anything other than a person, please return the field names as an empty string.\n\b** If you have multiple name, please only return the information for the first name and ignore the others.\n\b\b** Example: CRISP, CATHERINE,  MICHAEL, RACHEL, SARAH. Output should be: First name = CATHERINE, Last name = CRISP \n Please use the following full name:"
                           }
                       }
                   },
@@ -34,7 +34,7 @@ class Program
                       content = new object[] {
                           new {
                               type = "text",
-                              text = QUESTION
+                              text = FULL_NAME
                           }
                       }
                   }
