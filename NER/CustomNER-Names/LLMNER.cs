@@ -33,7 +33,7 @@ class Program
                       role = "user",
                       content = new object[] {
                           new {
-                              type = "text",
+                              type = "json_object",
                               text = FULL_NAME
                           }
                       }
