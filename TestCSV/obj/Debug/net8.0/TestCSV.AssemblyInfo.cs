@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestCSV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c35f47da178fc30281b2b7c223ebe0dfac21637a")]
+=======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da7c1aa35d8a5e6406a0b1f615c065baaa3625a7")]
+>>>>>>> parent of d2af3f4 (updating documents)
 [assembly: System.Reflection.AssemblyProductAttribute("TestCSV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestCSV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
